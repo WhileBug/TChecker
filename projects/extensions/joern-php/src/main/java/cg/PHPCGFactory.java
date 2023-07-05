@@ -157,6 +157,29 @@ public class PHPCGFactory {
 	 * 
 	 * @return A new call graph instance.
 	 */
+
+	public static String toString(){
+		HashMap<String, Object> string2ObjectMap = new Map<String, Object>();
+		string2ObjectMap.put("functionDefs", functionDefs);
+		string2ObjectMap.put("functionCalls", functionCalls);
+
+		string2ObjectMap.put("staticMethodDef", staticMethodDef);
+		string2ObjectMap.put("staticMethodCalls", staticMethodCalls);
+
+		string2ObjectMap.put("constructorDefs", constructorDefs);
+		string2ObjectMap.put("constructorNameDefs", constructorNameDefs);
+		string2ObjectMap.put("destructorDefs", destructorDefs);
+		string2ObjectMap.put("constructorCalls", constructorCalls);
+
+		string2ObjectMap.put("nonStaticMethodDefs", nonStaticMethodDefs);
+		string2ObjectMap.put("nonStaticMethodNameDefs", nonStaticMethodNameDefs);
+		string2ObjectMap.put("nonStaticMethodCalls", nonStaticMethodCalls);
+		string2ObjectMap.put("topLevelFunctionDefs", topLevelFunctionDefs);
+
+		//string2ObjectMap.put("classDef", classDef);
+		//string2ObjectMap.put("inhe", inhe);
+	}
+
 	public static CG newInstance() {
 		CG cg = new CG();
 		
